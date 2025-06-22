@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Message</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 100px;
+    }
+    h2 {
+      color: #333;
+    }
+    a button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      margin-top: 20px;
+      cursor: pointer;
+    }
+    a button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <h2>{{ message }}</h2>
+  <a href="{{ redirect_url }}">
+    <button>{% if "successfully" in message %}Login{% else %}Back{% endif %}</button>
+  </a>
+</body>
+</html>
