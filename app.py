@@ -41,7 +41,7 @@ def signup():
         else:
             users[username] = password
             save_user(username, password)
-            return render_template("message.html", message="User created successfully", redirect_url=url_for('login'))
+            return redirect(url_for('dashboard', username=username))
     return render_template("signup.html")
 
 @app.route("/login", methods=["GET","POST"])
